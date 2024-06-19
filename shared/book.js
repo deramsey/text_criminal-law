@@ -125,6 +125,7 @@ const addAlt = () => {
 }
 
 const addDeco = () => {
+  document.querySelector("html").setAttribute("lang",  "en" );
   var images = document.querySelectorAll('img');
 
   // Loop through each image
