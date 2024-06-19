@@ -105,3 +105,36 @@ function(b){this.W[b]=a.style[b]},this);Za(Gc,function(b){this.m.style[b]=a.styl
 Hc(this)?(a.style.position="absolute",a.style.setExpression("top",'document.compatMode=="CSS1Compat"?documentElement.scrollTop:document.body.scrollTop')):(a.style.position="fixed",a.style.top="0");this.P=l}}else Ic(this)};function Ic(a){if(a.P&&a.dispatchEvent("dock")){var b=a.a(),c;for(c in a.W)b.style[c]=a.W[c];Hc(a)&&b.style.removeExpression("top");a.m.parentNode==a.ka?a.m.parentNode.removeChild(a.m):a.m.parentNode.replaceChild(b,a.m);a.P=r}}u.Ya=function(){Ic(this);this.Na=X(this.a()).y;this.sa()};
 function Hc(a){return D&&!(G("7")&&gb(a.g()))};window.replaceIframe=function(a){var b=document.createElement("div");b.innerHTML=a.getAttribute("data-iframe-code");b.className="replaced-iframe-container";a.parentNode.replaceChild(b,a);return r};window.togglePrefaceDetails=function(){var a=document.getElementById("preface-details");a.style.display=""==a.style.display?"none":"";return r};var Jc=new $,Kc=z("navbar-top")?document.getElementById("navbar-top"):"navbar-top";Jc.G&&f(Error("Component already rendered"));
 if(Kc){Jc.ib=l;if(!Jc.l||Jc.l.b!=L(Kc))Jc.l=K(Kc);Jc.L(Kc);Jc.O()}else f(Error("Invalid element to decorate"));var Lc,Mc=document;Lc=Mc.querySelectorAll&&Mc.querySelector?Mc.querySelectorAll(".glossterm"):Mc.getElementsByClassName?Mc.getElementsByClassName("glossterm"):db();ua(Lc,function(a){var b=new Y;b.wa=l;b.Ba=250;b.className="glossdef-tooltip";var c;if(a.nextElementSibling!=i)c=a.nextElementSibling;else for(c=a.nextSibling;c&&1!=c.nodeType;)c=c.nextSibling;b.a().innerHTML=c.innerHTML;pc(b,a)});
+
+const addAlt = () => {
+  let l = document.querySelectorAll(".left");
+  let m = document.querySelectorAll(".middle");
+  let r = document.querySelectorAll(".right");
+
+  for(const i of l){
+    i.querySelector("img").setAttribute("alt", "back to previous section")
+  }
+
+  for(const j of m){
+    j.querySelector("img").setAttribute("alt", "go to table of contents")
+  }
+
+  for(const a of r){
+    a.querySelector("img").setAttribute("alt", "go to next section")
+  }
+}
+
+const addDeco = () => {
+  var images = document.querySelectorAll('img');
+
+  // Loop through each image
+  images.forEach(function(image) {
+    if (!image.hasAttribute('alt')) {
+      image.setAttribute('alt', ' ');
+      console.log('Empty alt attribute added to an image.');
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", addAlt);
+document.addEventListener("DOMContentLoaded", addDeco);

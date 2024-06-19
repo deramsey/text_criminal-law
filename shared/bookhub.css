@@ -1,3 +1,8 @@
+:root{
+  --green: #36792A;
+  --sand: #866B3C;
+}
+
 body {
   font-family: 'Calibri2', Calibri, Arial, 'Trebuchet MS', sans-serif;
 }
@@ -379,7 +384,7 @@ a img {
     background-color: #ecf9ea; }
     #book-content .key_takeaways > .title {
       color: #fff;
-      background-color: #39892f; }
+      background-color: var(--green); }
   #book-content .exercises, #book-content .exercises-math, #book-content .qandaset {
     background-color: #e3eff7; }
     #book-content .exercises .title, #book-content .exercises-math .title, #book-content .qandaset .title {
@@ -396,7 +401,7 @@ a img {
       font-style: italic;
       font-size: 0.8em; }
     #book-content .figure .title, #book-content .informalfigure .title {
-      color: #BB9966;
+      color: var(--sand);
       padding: 10px 10px 0 10px; }
       #book-content .figure .title .title-prefix, #book-content .informalfigure .title .title-prefix {
         color: black;
